@@ -11,10 +11,10 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
 
     [SerializeField] private LayerMask jumpableGround;
-
     private float dirX = 0f;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
+    private bool isJumping; //added
 
     private enum MovementState {idle,running,jumping,falling}
     
@@ -34,14 +34,23 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded() && !isJumping) //is jumping added
         {
             rb.velocity = new Vector2(rb.velocity.x,jumpForce);
+            isJumping = true;
         }
 
         UpdateAnimationUpdate();
 
 
+    }
+
+    void OnCollisionEnter2D(Collision2D other) // added
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
     }
 
     private void UpdateAnimationUpdate() {
@@ -78,4 +87,5 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded() {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
+
 }
