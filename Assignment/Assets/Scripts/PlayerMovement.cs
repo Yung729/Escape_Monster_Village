@@ -15,8 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
     private bool isJumping; //added
-    private bool isJumping2; //added
-
+    private bool doubleJump;
     private enum MovementState {idle,running,jumping,falling}
     
 
@@ -35,11 +34,17 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
 
-        if (Input.GetButtonDown("Jump") && IsGrounded() && !isJumping && !isJumping2) //is jumping added
+        if (Input.GetButtonDown("Jump") && IsGrounded() && !isJumping && !doubleJump) //is jumping added
         {
             rb.velocity = new Vector2(rb.velocity.x,jumpForce);
             isJumping = true;
-
+            doubleJump = true;
+        }
+        else if (Input.GetButtonDown("Jump") && isJumping && doubleJump )
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * 0.8f);
+            isJumping = false;
+            doubleJump = true;
         }
 
         UpdateAnimationUpdate();
@@ -52,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            doubleJump = false;
         }
     }
 
