@@ -7,6 +7,10 @@ public class PlayerLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
+    public PlayerMovement sn;
+    public float timeinair = 0;
+    public float deathtimer = 12;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -35,6 +39,7 @@ public class PlayerLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
+
 }
