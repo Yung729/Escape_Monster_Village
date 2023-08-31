@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Trap
+  - Potions
   layers:
   - Default
   - TransparentFX
