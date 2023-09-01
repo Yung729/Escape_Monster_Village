@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flight_0
+      name: FlyingEyeFlightRight_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,7 +131,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flight_1
+      name: FlyingEyeFlightRight_1
       rect:
         serializedVersion: 2
         x: 150
@@ -152,7 +152,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flight_2
+      name: FlyingEyeFlightRight_2
       rect:
         serializedVersion: 2
         x: 300
@@ -173,7 +173,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flight_3
+      name: FlyingEyeFlightRight_3
       rect:
         serializedVersion: 2
         x: 450
@@ -194,7 +194,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flight_4
+      name: FlyingEyeFlightRight_4
       rect:
         serializedVersion: 2
         x: 600
@@ -215,7 +215,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flight_5
+      name: FlyingEyeFlightRight_5
       rect:
         serializedVersion: 2
         x: 750
@@ -236,7 +236,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flight_6
+      name: FlyingEyeFlightRight_6
       rect:
         serializedVersion: 2
         x: 900
@@ -257,7 +257,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flight_7
+      name: FlyingEyeFlightRight_7
       rect:
         serializedVersion: 2
         x: 1050
@@ -278,7 +278,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Flight_0: -1565563226
-      Flight_1: 1467110070
-      Flight_2: 10355843
-      Flight_3: 181910724
-      Flight_4: 526400417
-      Flight_5: 1564743832
-      Flight_6: 1014352835
-      Flight_7: -1264244740
+      FlyingEyeFlightRight_0: -1565563226
+      FlyingEyeFlightRight_1: 1467110070
+      FlyingEyeFlightRight_2: 10355843
+      FlyingEyeFlightRight_3: 181910724
+      FlyingEyeFlightRight_4: 526400417
+      FlyingEyeFlightRight_5: 1564743832
+      FlyingEyeFlightRight_6: 1014352835
+      FlyingEyeFlightRight_7: -1264244740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

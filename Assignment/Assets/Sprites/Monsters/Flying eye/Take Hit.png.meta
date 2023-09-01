@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Take Hit_0
+      name: FlyingEyeTakeHitRight_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,7 +131,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Take Hit_1
+      name: FlyingEyeTakeHitRight_1
       rect:
         serializedVersion: 2
         x: 150
@@ -152,7 +152,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Take Hit_2
+      name: FlyingEyeTakeHitRight_2
       rect:
         serializedVersion: 2
         x: 300
@@ -173,7 +173,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Take Hit_3
+      name: FlyingEyeTakeHitRight_3
       rect:
         serializedVersion: 2
         x: 450
@@ -194,7 +194,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Take Hit_0: 438673746
-      Take Hit_1: 928568617
-      Take Hit_2: -1242660253
-      Take Hit_3: -679524098
+      FlyingEyeTakeHitRight_0: 438673746
+      FlyingEyeTakeHitRight_1: 928568617
+      FlyingEyeTakeHitRight_2: -1242660253
+      FlyingEyeTakeHitRight_3: -679524098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

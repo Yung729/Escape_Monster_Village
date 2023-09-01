@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack3_0
+      name: FlyingEyeAttackRight_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,7 +131,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack3_1
+      name: FlyingEyeAttackRight_1
       rect:
         serializedVersion: 2
         x: 150
@@ -152,7 +152,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack3_2
+      name: FlyingEyeAttackRight_2
       rect:
         serializedVersion: 2
         x: 300
@@ -173,7 +173,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack3_3
+      name: FlyingEyeAttackRight_3
       rect:
         serializedVersion: 2
         x: 450
@@ -194,7 +194,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack3_4
+      name: FlyingEyeAttackRight_4
       rect:
         serializedVersion: 2
         x: 600
@@ -215,7 +215,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack3_5
+      name: FlyingEyeAttackRight_5
       rect:
         serializedVersion: 2
         x: 750
@@ -236,7 +236,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack3_0: -1995488566
-      Attack3_1: -1696390698
-      Attack3_2: -756424798
-      Attack3_3: -1010908487
-      Attack3_4: 272472047
-      Attack3_5: -1475773874
+      FlyingEyeAttackRight_0: -1995488566
+      FlyingEyeAttackRight_1: -1696390698
+      FlyingEyeAttackRight_2: -756424798
+      FlyingEyeAttackRight_3: -1010908487
+      FlyingEyeAttackRight_4: 272472047
+      FlyingEyeAttackRight_5: -1475773874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
