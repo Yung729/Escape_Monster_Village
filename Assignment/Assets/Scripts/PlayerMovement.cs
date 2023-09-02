@@ -47,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
             doubleJump = true;
         }
 
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            anim.SetTrigger("Attack");
+        }
+
         UpdateAnimationUpdate();
 
 
