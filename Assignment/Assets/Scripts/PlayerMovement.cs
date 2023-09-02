@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 14f;
     private bool isJumping; //added
     private bool doubleJump;
-    private enum MovementState {idle,running,jumping,falling}
+    private enum MovementState {idle,running,jumping,falling,crouch}
     
 
 
@@ -50,6 +50,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             anim.SetTrigger("Attack");
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            anim.SetTrigger("Crouch");
+            coll.size = new Vector2(0.3447157F, 0.7626788F);
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            anim.SetTrigger("Reload");
+            coll.size = new Vector2(0.3447157F, 1.160765F);
         }
 
         UpdateAnimationUpdate();
