@@ -30,16 +30,9 @@ public class ChasePlayer : MonoBehaviour
         if (target != null)
         {
             //move the enemy to the target in x
-            transform.Translate(new Vector3(distance.x, 0, 0) * moveSpeed * Time.deltaTime);
+            transform.Translate(new Vector2(distance.x, 0) * moveSpeed * Time.deltaTime);
 
 
-            //if x position, move right,else move left
-            if (distance.x > 0)
-                //set animator moveDir parameter to play more right animation
-                animator.SetInteger("moveDir", 1);
-            else
-                //set animator moveDir parameter to play more left animation
-                animator.SetInteger("moveDir", 2);
         }
 
     }
