@@ -20,24 +20,22 @@ public class ZombieMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        do
-        {
-            // xRight = Screen width - enemny sprite width
-            moveDis = (Screen.width - 32) / 100;
 
-            // if reach xRight, set move right to false
-            if (transform.position.x > moveDis) //(xRight){
-                isMoveRight = true;
+        // xRight = Screen width - enemny sprite width
+        moveDis = (Screen.width - 32) / 100;
 
-            // if reach -xRight, set move right to true
-            if (transform.position.x < -moveDis) //(-xRight){
-                isMoveRight = false;
+        // if reach xRight, set move right to false
+        if (transform.position.x > moveDis) //(xRight){
+            isMoveRight = true;
 
-            if (isMoveRight)
-                moveRight();
-            else
-                moveLeft();
-        } while (moveDis < -35.84);
+        // if reach -xRight, set move right to true
+        if (transform.position.x < -moveDis) //(-xRight){
+            isMoveRight = false;
+
+        if (isMoveRight)
+            moveRight();
+        else
+            moveLeft();
     }
 
     void moveRight()
