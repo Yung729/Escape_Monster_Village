@@ -7,13 +7,17 @@ public class PlayerLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    public PlayerMovement sn;
-    public float timeinair = 0;
-    public float deathtimer = 12;
+
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     private void Start()
     {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -22,6 +26,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
+            takeDamage(100);
             Die();
         }
     }
@@ -36,7 +41,13 @@ public class PlayerLife : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    // Update is called once per frame
+
+
+    void takeDamage(int damage) {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
     void Update()
     {
         
