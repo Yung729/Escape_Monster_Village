@@ -22,12 +22,16 @@ public class PlayerLife : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+       
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
             takeDamage(100);
-            Die();
         }
     }
 
@@ -44,13 +48,25 @@ public class PlayerLife : MonoBehaviour
 
 
     void takeDamage(int damage) {
-        currentHealth -= damage;
+        
+        if (currentHealth <= 0 )
+        {
+            currentHealth = 0;
+            Die();
+        }
+        else
+        {
+            currentHealth -= damage;
+            if (currentHealth <= 0)
+            {
+                currentHealth = 0;
+                Die();
+            }
+        }
+
         healthBar.SetHealth(currentHealth);
     }
 
-    void Update()
-    {
-        
-    }
+    
 
 }

@@ -223,7 +223,6 @@ GameObject:
   - component: {fileID: 91372088}
   - component: {fileID: 91372087}
   - component: {fileID: 91372086}
-  - component: {fileID: 91372091}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -319,21 +318,6 @@ Transform:
   m_Father: {fileID: 922450717}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &91372091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91372085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc091b038c63bc498647fb1d748a2e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 349008605}
-  moveSpeed: 1
-  animator: {fileID: 0}
 --- !u!1 &99976347
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,9 +327,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99976348}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Trap
-  m_TagString: Ground
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +367,6 @@ GameObject:
   - component: {fileID: 125310694}
   - component: {fileID: 125310693}
   - component: {fileID: 125310692}
-  - component: {fileID: 125310697}
   m_Layer: 0
   m_Name: 'Goblin '
   m_TagString: Monster
@@ -479,21 +462,6 @@ Transform:
   m_Father: {fileID: 922450717}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &125310697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125310691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc091b038c63bc498647fb1d748a2e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 349008605}
-  moveSpeed: 1
-  animator: {fileID: 0}
 --- !u!4 &145079747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
@@ -513,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872973197648305949, guid: 155e434527152004b85e78be5f24144f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8145404191667348807, guid: 155e434527152004b85e78be5f24144f, type: 3}
       propertyPath: m_RootOrder
@@ -774,7 +742,6 @@ GameObject:
   - component: {fileID: 332343214}
   - component: {fileID: 332343213}
   - component: {fileID: 332343212}
-  - component: {fileID: 332343217}
   m_Layer: 0
   m_Name: FireWorm
   m_TagString: Monster
@@ -870,21 +837,6 @@ Transform:
   m_Father: {fileID: 922450717}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &332343217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332343211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc091b038c63bc498647fb1d748a2e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 349008605}
-  moveSpeed: 1
-  animator: {fileID: 0}
 --- !u!1 &333498419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,7 +1238,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974296841158627693, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299393751088811129, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1393623
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299393751088811129, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
+      propertyPath: m_Size.y
+      value: 0.18873227
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299393751088811129, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0140628815
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299393751088811129, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.019840062
       objectReference: {fileID: 0}
     - target: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_RootOrder
@@ -2218,7 +2186,6 @@ GameObject:
   - component: {fileID: 1146013486}
   - component: {fileID: 1146013485}
   - component: {fileID: 1146013484}
-  - component: {fileID: 1146013489}
   m_Layer: 0
   m_Name: Flying Eye
   m_TagString: Monster
@@ -2314,21 +2281,6 @@ Transform:
   m_Father: {fileID: 922450717}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1146013489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146013483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc091b038c63bc498647fb1d748a2e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 349008605}
-  moveSpeed: 1
-  animator: {fileID: 1146013484}
 --- !u!4 &1172800331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
@@ -2747,7 +2699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974296841158627693, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_RootOrder
@@ -2915,7 +2867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974296841158627693, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_RootOrder
@@ -3317,8 +3269,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: -1422658831
-  m_SortingOrder: 4
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1645659580
 RectTransform:
@@ -3902,7 +3854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974296841158627693, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_RootOrder
@@ -4112,8 +4064,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1469928041
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -10167,7 +10119,6 @@ GameObject:
   - component: {fileID: 1961775461}
   - component: {fileID: 1961775460}
   - component: {fileID: 1961775459}
-  - component: {fileID: 1961775464}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Monster
@@ -10263,21 +10214,6 @@ Transform:
   m_Father: {fileID: 922450717}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1961775464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961775458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc091b038c63bc498647fb1d748a2e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 349008605}
-  moveSpeed: 1
-  animator: {fileID: 0}
 --- !u!4 &1979384893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8145404191667348807, guid: 155e434527152004b85e78be5f24144f, type: 3}
@@ -10454,7 +10390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974296841158627693, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
       propertyPath: m_RootOrder
@@ -10519,7 +10455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4872973197648305949, guid: 155e434527152004b85e78be5f24144f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8145404191667348807, guid: 155e434527152004b85e78be5f24144f, type: 3}
       propertyPath: m_RootOrder
