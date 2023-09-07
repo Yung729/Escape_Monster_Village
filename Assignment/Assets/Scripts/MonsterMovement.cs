@@ -2,54 +2,66 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieMovement : MonoBehaviour
+public class MonsterMovement : MonoBehaviour
 {
-    public float moveSpeed = 1;     //enemy move  speed
-    public Animator animator;       //enemy animator component
-    //float xRight;                 //To store Screen width - enemy sprite width
-    float moveDis = 1;              //absolute move distance
-    Vector3 localScale;             //enemy local scale
-    bool isMoveRight = true;        //whether enemy is moving right
-    // Start is called before the first frame update
+    public Transform[] patrolPoints;
+    public float moveSpeed;
+    public int patrolDestination;
+
+    public Transform playerTransform;
+    public bool isChasing;
+    public float chaseDistance;
+
     void Start()
     {
-        //get the enemy local scale from the transform component
-        localScale = transform.localScale;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isChasing)
+        {
+            if (transform.position.x > playerTransform.position.x)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+                transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+            }
+            if (transform.position.x < playerTransform.position.x)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+                transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            }
 
-        // xRight = Screen width - enemny sprite width
-        moveDis = (Screen.width - 32) / 100;
-
-        // if reach xRight, set move right to false
-        if (transform.position.x > moveDis) //(xRight){
-            isMoveRight = true;
-
-        // if reach -xRight, set move right to true
-        if (transform.position.x < -moveDis) //(-xRight){
-            isMoveRight = false;
-
-        if (isMoveRight)
-            moveRight();
+        }
         else
-            moveLeft();
+        {
+            if (Vector2.Distance(transform.position, playerTransform.position) < chaseDistance)
+                isChasing = true;
+
+            if (patrolDestination == 0)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
+                if (Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                    patrolDestination = 1;
+                }
+            }
+
+            if (patrolDestination == 1)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
+                if (Vector2.Distance(transform.position, patrolPoints[1].position) < .2f)
+                {
+                    transform.localScale = new Vector3(-1, 1, 1);
+                    patrolDestination = 1;
+                }
+            }
+        }
+
     }
 
-    void moveRight()
-    {
-        isMoveRight = true;                 //set move right to true
-        localScale.x = 1;                   //assign the local scale to positive for right
-        transform.localScale = localScale;  //set the zombie object local scale 
-    }
-
-    void moveLeft()
-    {
-        isMoveRight = false;                //set move right to false
-        localScale.x = -1;                  //assign the local scale to negative for left
-        transform.localScale = localScale;  //set the zombie object local scale
-    }
 }
+
 
