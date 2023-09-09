@@ -67,6 +67,18 @@ public class PlayerLife : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    public void addHealth(int health)
+    {
+        if (currentHealth == 100)
+        {
+            health = 0;
+        }
+
+     currentHealth += health;
     
+     healthBar.SetHealth(currentHealth);
+    }
+
+
 
 }

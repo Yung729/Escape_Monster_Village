@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ItemCollecter : MonoBehaviour
 {
+    public PlayerLife health;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Potions"))
         {
             Destroy(collision.gameObject);
+            health.addHealth(20);
         }
     
     }
