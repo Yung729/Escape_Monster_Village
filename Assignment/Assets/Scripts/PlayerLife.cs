@@ -9,7 +9,7 @@ public class PlayerLife : MonoBehaviour
     private Animator anim;
 
     public int maxHealth = 100;
-    public int currentHealth;
+    public int currentHealth = 0;
 
     public HealthBar healthBar;
 

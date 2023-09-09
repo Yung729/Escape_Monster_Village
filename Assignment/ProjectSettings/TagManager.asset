@@ -8,6 +8,8 @@ TagManager:
   - Trap
   - Potions
   - Monster
+  - Potions1
+  - Potions2
   layers:
   - Default
   - TransparentFX
