@@ -32,6 +32,7 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             takeDamage(100);
+            Die();
         }
     }
 
