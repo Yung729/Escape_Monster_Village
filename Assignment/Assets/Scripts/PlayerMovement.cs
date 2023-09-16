@@ -9,6 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private Animator anim;
     private SpriteRenderer sprite;
+    private GameObject attackArea = default;
+
+    private bool attacking = false;
+
+    private float timeToAttack = 0.25f;
+    private float timer = 0f;
+
 
     [SerializeField] private LayerMask jumpableGround;
     private float dirX = 0f;
@@ -26,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
+        attackArea = transform.GetChild(0).gameObject;
     }
 
     private void Update()
@@ -49,7 +57,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.H))
         {
+            Attack();
             anim.SetTrigger("Attack");
+        }
+
+        if (attacking)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= timeToAttack)
+            {
+                timer = 0;
+                attacking = false;
+                attackArea.SetActive(attacking);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -118,6 +139,11 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed += speed;
         
 
+    }
+
+    private void Attack() {
+        attacking = true;
+        attackArea.SetActive(attacking);
     }
 
 }
