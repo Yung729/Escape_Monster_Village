@@ -32,7 +32,6 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             takeDamage(100);
-            Die();
         }
     }
 
@@ -57,14 +56,14 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
-
+            
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 Die();
             }
-            anim.SetTrigger("Hurt");
+            
         }
 
         healthBar.SetHealth(currentHealth);
