@@ -107,11 +107,13 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.running;
             sprite.flipX = false;
+            attackArea.transform.localScale = new Vector3(1, 1, 1);
         }
         else if (dirX < 0f)
         {
             state = MovementState.running;
             sprite.flipX = true;
+            attackArea.transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {

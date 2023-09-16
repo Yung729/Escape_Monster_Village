@@ -56,7 +56,6 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
-            
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
