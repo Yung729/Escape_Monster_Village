@@ -1344,8 +1344,8 @@ GameObject:
   - component: {fileID: 349008606}
   - component: {fileID: 349008607}
   - component: {fileID: 349008608}
-  - component: {fileID: 349008609}
   - component: {fileID: 349008610}
+  - component: {fileID: 349008609}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1370,8 +1370,8 @@ MonoBehaviour:
     m_Bits: 64
   moveSpeed: 8
   jumpForce: 12
-  sttackSound: {fileID: 349008609}
-  jumpSound: {fileID: 349008610}
+  sttackSound: {fileID: 349008610}
+  jumpSound: {fileID: 349008609}
 --- !u!50 &349008602
 Rigidbody2D:
   serializedVersion: 4
@@ -1572,7 +1572,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 588068f65e488f441bfa26ed3ebe8a4d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3cc71c0b4ee7b8440bd380d793f24e62, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1668,7 +1668,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3cc71c0b4ee7b8440bd380d793f24e62, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 588068f65e488f441bfa26ed3ebe8a4d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2310,7 +2310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   currentHealth: 0
-  anim: {fileID: 0}
+  anim: {fileID: 1961775459}
 --- !u!4 &845029574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
