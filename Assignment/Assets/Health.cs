@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private Animator anim;
-    private BoxCollider2D coll;
+
+
     public int maxHealth = 10;
     public int currentHealth = 0;
 
@@ -15,9 +14,6 @@ public class Health : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        coll = GetComponent<BoxCollider2D>();
 
     }
 
@@ -29,6 +25,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            Destroy(gameObject);
         }
         else
         {
@@ -36,6 +33,7 @@ public class Health : MonoBehaviour
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
+                Destroy(gameObject);
                 currentHealth = 0;
             }
 

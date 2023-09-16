@@ -24,7 +24,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping; //added
     private bool doubleJump;
     private enum MovementState {idle,running,jumping,falling,crouch}
-    
+
+    //sound
+    [SerializeField] private AudioSource sttackSound;
+    [SerializeField] private AudioSource jumpSound;
 
 
     private void Start()
@@ -44,12 +47,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded() && !isJumping && !doubleJump) //is jumping added
         {
+            jumpSound.Play();
             rb.velocity = new Vector2(rb.velocity.x,jumpForce);
             isJumping = true;
             doubleJump = true;
         }
         else if (Input.GetButtonDown("Jump") && isJumping && doubleJump )
         {
+            jumpSound.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * 0.8f);
             isJumping = false;
             doubleJump = true;
@@ -57,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.H))
         {
+            sttackSound.Play();
             Attack();
             anim.SetTrigger("Attack");
         }
