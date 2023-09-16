@@ -56,12 +56,14 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
+
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 Die();
             }
+            anim.SetTrigger("Hurt");
         }
 
         healthBar.SetHealth(currentHealth);
