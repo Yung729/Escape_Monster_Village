@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallShootingScript : MonoBehaviour
+public class LazerShootingScript : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
@@ -15,9 +15,9 @@ public class FireBallShootingScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         Vector3 direction = player.transform.position - transform.position;
-        rb.velocity = new Vector2(direction.x, 0).normalized * force;
+        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
-        float rot = Mathf.Atan2(0, -direction.x) * Mathf.Rad2Deg;
+        float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 180);
     }
 
@@ -29,18 +29,18 @@ public class FireBallShootingScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerLife>().takeDamage(10);
+            Destroy(gameObject);
+
+        }
+
         if (other.gameObject.CompareTag("Ground"))
         {
             Destroy(gameObject);
 
         }
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.GetComponent<PlayerLife>().takeDamage(20);
-            Destroy(gameObject);
-
-        }
-
     }
 }
