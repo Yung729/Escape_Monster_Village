@@ -9,6 +9,7 @@ public class EnemyDamage : MonoBehaviour
     private Animator anim;
     // Start is called before the first frame update
 
+    private Health health;
 
     private void Start() {
         anim = GetComponent<Animator>();

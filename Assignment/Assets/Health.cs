@@ -8,13 +8,12 @@ public class Health : MonoBehaviour
 
     public int maxHealth = 10;
     public int currentHealth = 0;
-
+    public Animator anim;
 
     // Start is called before the first frame update
     private void Start()
     {
         currentHealth = maxHealth;
-
     }
 
 
@@ -29,7 +28,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-
+            anim.SetTrigger("Hurt");
             currentHealth -= damage;
             if (currentHealth <= 0)
             {

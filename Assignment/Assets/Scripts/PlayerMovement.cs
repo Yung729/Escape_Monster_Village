@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
         attackArea = transform.GetChild(0).gameObject;
+        attackArea.SetActive(attacking);
     }
 
     private void Update()
