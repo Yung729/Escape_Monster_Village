@@ -10,7 +10,8 @@ public class PlayerLife : MonoBehaviour
 
     public int maxHealth = 100;
     public int currentHealth = 0;
-
+    [SerializeField] private AudioSource damageSound;
+    [SerializeField] private AudioSource deathSound;
     public HealthBar healthBar;
 
     // Start is called before the first frame update
@@ -38,6 +39,7 @@ public class PlayerLife : MonoBehaviour
     private void Die()
     {
         anim.SetTrigger("death");
+        deathSound.Play();
         rb.bodyType = RigidbodyType2D.Static;
         
     }
@@ -66,6 +68,7 @@ public class PlayerLife : MonoBehaviour
             else
             {
                 anim.SetTrigger("Hurt");
+                damageSound.Play();
             }
             
         }
