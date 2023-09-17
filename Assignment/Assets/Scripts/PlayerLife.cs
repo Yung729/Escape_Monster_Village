@@ -37,8 +37,9 @@ public class PlayerLife : MonoBehaviour
 
     private void Die()
     {
-        rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
+        rb.bodyType = RigidbodyType2D.Static;
+        
     }
 
     private void RestartLevel()
@@ -48,7 +49,6 @@ public class PlayerLife : MonoBehaviour
 
 
     public void takeDamage(int damage) {
-        
         if (currentHealth <= 0 )
         {
             currentHealth = 0;
@@ -56,11 +56,16 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
+            
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 Die();
+            }
+            else
+            {
+                anim.SetTrigger("Hurt");
             }
             
         }
@@ -68,11 +73,17 @@ public class PlayerLife : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    private IEnumerator VisualIndicator(Color color) {
+        GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
     public void addHealth(int health)
     {
         int healthCheck = currentHealth;
         healthCheck += health;
-
+        StartCoroutine(VisualIndicator(Color.green));
         if (healthCheck >= 100)
         {
             currentHealth = 100;

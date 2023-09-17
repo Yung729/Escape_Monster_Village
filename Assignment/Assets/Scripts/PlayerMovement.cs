@@ -83,13 +83,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             anim.SetTrigger("Crouch");
-            coll.size = new Vector2(0.3447157F, 0.7626788F);
+            coll.offset = new Vector2(0.03795502F, -0.1938401F);
+            coll.size = new Vector2(0.634712F, 0.9188361F);
         }
 
         if (Input.GetKeyUp(KeyCode.S))
         {
             anim.SetTrigger("Reload");
-            coll.size = new Vector2(0.3447157F, 1.160765F);
+            coll.offset = new Vector2(0.007280096F, -0.01875249F);
+            coll.size = new Vector2(0.3447157F, 1.227855F);
         }
 
         UpdateAnimationUpdate();
@@ -146,8 +148,6 @@ public class PlayerMovement : MonoBehaviour
     public void increaseSpeed(float speed) {
         
         moveSpeed += speed;
-        
-
     }
 
     private void Attack() {
