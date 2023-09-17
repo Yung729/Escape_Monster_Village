@@ -7,12 +7,15 @@ public class EnemyShooting : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPos;
 
+
+    private Animator anim;
     private float timer;
     private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,8 +30,10 @@ public class EnemyShooting : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > 2)
             {
+                anim.SetTrigger("Attack");
                 timer = 0;
                 shoot();
+
             }
         }
 

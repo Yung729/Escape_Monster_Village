@@ -670,6 +670,8 @@ GameObject:
   - component: {fileID: 125310694}
   - component: {fileID: 125310693}
   - component: {fileID: 125310692}
+  - component: {fileID: 125310695}
+  - component: {fileID: 125310696}
   m_Layer: 0
   m_Name: 'Goblin '
   m_TagString: Monster
@@ -765,6 +767,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &125310695
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125310691}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &125310696
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125310691}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.007347882, y: -0.3086626}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9287609, y: 1.1219314}
+  m_EdgeRadius: 0
 --- !u!4 &145079747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
@@ -1312,6 +1386,7 @@ GameObject:
   - component: {fileID: 332343212}
   - component: {fileID: 332343215}
   - component: {fileID: 332343216}
+  - component: {fileID: 332343217}
   m_Layer: 0
   m_Name: FireWormSprite
   m_TagString: Monster
@@ -1449,13 +1524,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332343211}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a52ac7cc6371df47a5ac3020bce7e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  palyerLife: {fileID: 349008607}
+  playerLife: {fileID: 0}
+--- !u!114 &332343217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332343211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796cc28d35be6fa48a6c1906f6d20b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5108785410178579838, guid: 4890d4eec6630d645b425121b8ee995a, type: 3}
+  bulletPos: {fileID: 27258232}
 --- !u!1 &333498419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,9 +2842,6 @@ MonoBehaviour:
   - {fileID: 24977612}
   moveSpeed: 2
   patrolDestination: 1
-  playerTransform: {fileID: 0}
-  isChasing: 0
-  chaseDistance: 0
 --- !u!50 &783444284
 Rigidbody2D:
   serializedVersion: 4
@@ -3451,6 +3537,10 @@ GameObject:
   - component: {fileID: 1146013485}
   - component: {fileID: 1146013484}
   - component: {fileID: 1146013487}
+  - component: {fileID: 1146013489}
+  - component: {fileID: 1146013490}
+  - component: {fileID: 1146013491}
+  - component: {fileID: 1146013492}
   m_Layer: 0
   m_Name: Flying Eye
   m_TagString: Monster
@@ -3559,8 +3649,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796cc28d35be6fa48a6c1906f6d20b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 7641304154595955683, guid: b3bab878d3a9c1a42950818f738d8ae8, type: 3}
   bulletPos: {fileID: 389341163}
+--- !u!50 &1146013489
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146013483}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!61 &1146013490
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146013483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.050281048, y: -0.029008225}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.6875, y: 4.6875}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0505447, y: 0.6898323}
+  m_EdgeRadius: 0
+--- !u!114 &1146013491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146013483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a525bf2a9fd3464393392a099fb37c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
+  anim: {fileID: 0}
+--- !u!114 &1146013492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146013483}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a52ac7cc6371df47a5ac3020bce7e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  playerLife: {fileID: 0}
 --- !u!1001 &1152392787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5301,7 +5492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -364.08008, y: 155}
+  m_AnchoredPosition: {x: -364.0801, y: 155}
   m_SizeDelta: {x: -804.47, y: 24.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1613777675
@@ -5552,7 +5743,6 @@ GameObject:
   - component: {fileID: 1790345560}
   - component: {fileID: 1790345559}
   - component: {fileID: 1790345563}
-  - component: {fileID: 1790345564}
   m_Layer: 0
   m_Name: FireWorm
   m_TagString: Untagged
@@ -5577,9 +5767,6 @@ MonoBehaviour:
   - {fileID: 1422611343}
   moveSpeed: 2
   patrolDestination: 1
-  playerTransform: {fileID: 349008605}
-  isChasing: 0
-  chaseDistance: 2
 --- !u!50 &1790345560
 Rigidbody2D:
   serializedVersion: 4
@@ -5684,20 +5871,6 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   anim: {fileID: 332343212}
---- !u!114 &1790345564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790345558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796cc28d35be6fa48a6c1906f6d20b59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 5108785410178579838, guid: 4890d4eec6630d645b425121b8ee995a, type: 3}
-  bulletPos: {fileID: 27258232}
 --- !u!1 &1810743973
 GameObject:
   m_ObjectHideFlags: 0
@@ -26687,7 +26860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  palyerLife: {fileID: 349008607}
+  playerLife: {fileID: 0}
 --- !u!70 &1961775463
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

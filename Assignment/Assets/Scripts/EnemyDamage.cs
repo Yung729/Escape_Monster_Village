@@ -5,11 +5,10 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     public int damage;
-    public PlayerLife palyerLife;
+    public PlayerLife playerLife;
     private Animator anim;
     // Start is called before the first frame update
 
-    private Health health;
 
     private void Start() {
         anim = GetComponent<Animator>();
@@ -19,7 +18,7 @@ public class EnemyDamage : MonoBehaviour
         anim.SetBool("Attack", true);
         if (collision.gameObject.tag =="Player")
         {
-            palyerLife.takeDamage(damage);
+            playerLife.takeDamage(damage);
             
         }
     }
