@@ -11,10 +11,13 @@ public class Chest : MonoBehaviour
     private bool canOpen;
     private bool isOpened;
     private Animator anim;
+    private GameObject key = default;
 
     void Start() {
         anim = GetComponent<Animator>();
         isOpened = false;
+        key = transform.GetChild(1).gameObject;
+        key.SetActive(false);
     }
 
     void Update() {
@@ -33,6 +36,7 @@ public class Chest : MonoBehaviour
         if (col.gameObject.CompareTag("Player") )
         {
             canOpen = true;
+            key.SetActive(true);
         }
     }
 
@@ -42,6 +46,7 @@ public class Chest : MonoBehaviour
         if (col.gameObject.CompareTag("Player") )
         {
             canOpen = false;
+            key.SetActive(false);
         }
     }
 

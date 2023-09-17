@@ -7,13 +7,15 @@ public class ItemCollecter : MonoBehaviour
     public PlayerLife player;
     public PlayerMovement control;
 
+    [SerializeField] private AudioSource healthSound;
+
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.gameObject.CompareTag("Potions"))
         {
             Destroy(collision.gameObject);
             player.addHealth(20);
-            
+            healthSound.Play();
             
         }
 
