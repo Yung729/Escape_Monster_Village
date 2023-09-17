@@ -4,63 +4,31 @@ using UnityEngine;
 
 public class MeleeMonster : MonoBehaviour
 {
-    [SerializeField] private float attackCooldown;
-    [SerializeField] private float range;
-    [SerializeField] private int damage;
-    private float cooldownTimer = Mathf.Infinity;
+    public float speed;
+    public float radius;
 
-    private Animator anim;
-    private PlayerLife playerLife;
+    private Transform playerTransform;
 
-    [SerializeField] private float colliderDistance;
-    [SerializeField] private BoxCollider2D boxCollider;
-    [SerializeField] private LayerMask playerLayer;
-
-
-    private void Awake()
+    public void Start()
     {
-        anim = GetComponent<Animator>();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        cooldownTimer += Time.deltaTime;
-
-        if (PlayerInSight())
+        if(playerTransform != null)
         {
-            if (cooldownTimer >= attackCooldown)
+            float distance = (transform.position - playerTransform.position).sqrMagnitude;
+
+            if(distance < radius)
             {
-                cooldownTimer = 0;
-                anim.SetTrigger("Attack");
+                transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, speed * Time.deltaTime);
+
             }
         }
     }
 
-    private bool PlayerInSight()
-    {
-        RaycastHit2D hit =
-            Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
-            0, Vector2.left, 0, playerLayer);
-
-        if (hit.collider != null)
-            DamagePlayer();
-
-        return hit.collider != null;
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
-    }
-
-    private void DamagePlayer()
-    {
-        if (PlayerInSight())
-            playerLife.takeDamage(damage);
-    }
 
 }
     
