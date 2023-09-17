@@ -83,13 +83,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             anim.SetTrigger("Crouch");
-            coll.size = new Vector2(0.3447157F, 0.7626788F);
+            coll.size = new Vector2(0.6960619F, 0.9518722F);
         }
 
         if (Input.GetKeyUp(KeyCode.S))
         {
             anim.SetTrigger("Reload");
-            coll.size = new Vector2(0.3447157F, 1.160765F);
+            coll.size = new Vector2(0.3447157F, 1.227855F);
         }
 
         UpdateAnimationUpdate();
