@@ -2729,6 +2729,7 @@ GameObject:
   - component: {fileID: 783444284}
   - component: {fileID: 783444283}
   - component: {fileID: 783444287}
+  - component: {fileID: 783444288}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -2753,9 +2754,6 @@ MonoBehaviour:
   - {fileID: 24977612}
   moveSpeed: 2
   patrolDestination: 1
-  playerTransform: {fileID: 0}
-  isChasing: 0
-  chaseDistance: 0
 --- !u!50 &783444284
 Rigidbody2D:
   serializedVersion: 4
@@ -2814,6 +2812,51 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 0
   anim: {fileID: 1961775459}
+--- !u!61 &783444288
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783444282}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &845029574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5528186800972048590, guid: 87381ba570be1ed4fab090b95c4b3ada, type: 3}
@@ -3451,6 +3494,8 @@ GameObject:
   - component: {fileID: 1146013485}
   - component: {fileID: 1146013484}
   - component: {fileID: 1146013487}
+  - component: {fileID: 1146013488}
+  - component: {fileID: 1146013489}
   m_Layer: 0
   m_Name: Flying Eye
   m_TagString: Monster
@@ -3559,8 +3604,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796cc28d35be6fa48a6c1906f6d20b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 7641304154595955683, guid: b3bab878d3a9c1a42950818f738d8ae8, type: 3}
   bulletPos: {fileID: 389341163}
+--- !u!61 &1146013488
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146013483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.048648477, y: 0.016275406}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.6875, y: 4.6875}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.490371, y: 1.2046163}
+  m_EdgeRadius: 0
+--- !u!114 &1146013489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146013483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a525bf2a9fd3464393392a099fb37c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
+  anim: {fileID: 0}
 --- !u!1001 &1152392787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5577,9 +5682,6 @@ MonoBehaviour:
   - {fileID: 1422611343}
   moveSpeed: 2
   patrolDestination: 1
-  playerTransform: {fileID: 349008605}
-  isChasing: 0
-  chaseDistance: 2
 --- !u!50 &1790345560
 Rigidbody2D:
   serializedVersion: 4
