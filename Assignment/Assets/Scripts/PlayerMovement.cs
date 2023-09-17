@@ -83,12 +83,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             anim.SetTrigger("Crouch");
-            coll.size = new Vector2(0.6960619F, 0.9518722F);
+            coll.offset = new Vector2(0.03795502F, -0.1938401F);
+            coll.size = new Vector2(0.634712F, 0.9188361F);
         }
 
         if (Input.GetKeyUp(KeyCode.S))
         {
             anim.SetTrigger("Reload");
+            coll.offset = new Vector2(0.007280096F, -0.01875249F);
             coll.size = new Vector2(0.3447157F, 1.227855F);
         }
 
