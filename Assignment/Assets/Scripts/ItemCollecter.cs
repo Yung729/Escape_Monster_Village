@@ -6,6 +6,7 @@ public class ItemCollecter : MonoBehaviour
 {
     public PlayerLife player;
     public PlayerMovement control;
+    public AtackArea damage;
 
     [SerializeField] private AudioSource healthSound;
 
@@ -22,7 +23,7 @@ public class ItemCollecter : MonoBehaviour
         if (collision.gameObject.CompareTag("Potions1"))
         {
             Destroy(collision.gameObject);
-
+            damage.increaseDamage(1);
         }
 
         if (collision.gameObject.CompareTag("Potions2"))
