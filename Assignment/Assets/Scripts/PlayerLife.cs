@@ -37,8 +37,9 @@ public class PlayerLife : MonoBehaviour
 
     private void Die()
     {
-        rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
+        rb.bodyType = RigidbodyType2D.Static;
+        
     }
 
     private void RestartLevel()
@@ -55,11 +56,16 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
+            
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 Die();
+            }
+            else
+            {
+                anim.SetTrigger("Hurt");
             }
             
         }
