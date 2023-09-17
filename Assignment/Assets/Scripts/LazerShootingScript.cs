@@ -37,10 +37,6 @@ public class LazerShootingScript : MonoBehaviour
 
         }
 
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            Destroy(gameObject);
-
-        }
+       
     }
 }
