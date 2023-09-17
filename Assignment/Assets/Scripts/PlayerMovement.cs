@@ -146,8 +146,6 @@ public class PlayerMovement : MonoBehaviour
     public void increaseSpeed(float speed) {
         
         moveSpeed += speed;
-        
-
     }
 
     private void Attack() {

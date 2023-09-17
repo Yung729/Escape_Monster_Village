@@ -28,7 +28,7 @@ public class ItemCollecter : MonoBehaviour
         if (collision.gameObject.CompareTag("Potions2"))
         {
             Destroy(collision.gameObject);
-            control.increaseSpeed(3.0F);
+            control.increaseSpeed(1.0F);
 
         }
 
