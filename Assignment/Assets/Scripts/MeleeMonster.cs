@@ -10,7 +10,7 @@ public class MeleeMonster : MonoBehaviour
     private float cooldownTimer = Mathf.Infinity;
 
     private Animator anim;
-    private Health monsterHealth;
+    private PlayerLife playerLife;
 
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
@@ -45,7 +45,7 @@ public class MeleeMonster : MonoBehaviour
             0, Vector2.left, 0, playerLayer);
 
         if (hit.collider != null)
-            monsterHealth = hit.transform.GetComponent<Health>();
+            DamagePlayer();
 
         return hit.collider != null;
     }
@@ -59,7 +59,7 @@ public class MeleeMonster : MonoBehaviour
     private void DamagePlayer()
     {
         if (PlayerInSight())
-            monsterHealth.Damage(10);
+            playerLife.takeDamage(damage);
     }
 
 }
