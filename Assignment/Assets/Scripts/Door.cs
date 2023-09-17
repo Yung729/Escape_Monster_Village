@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
@@ -28,8 +29,8 @@ public class Door : MonoBehaviour
     void EnterDoor() {
         if (isDoor && Input.GetKeyDown(KeyCode.I))
         {
-            
-            player.position = backDoor.position;
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
