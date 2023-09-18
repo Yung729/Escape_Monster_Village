@@ -12,6 +12,13 @@ public class AtackArea : MonoBehaviour
             Health health = collider.GetComponent<Health>();
             health.Damage(damage);
         }
+
+        if (collider.GetComponent<BossHealth>() != null)
+        {
+            BossHealth health = collider.GetComponent<BossHealth>();
+            health.Damage(damage);
+        }
+
     }
 
     public void increaseDamage(int input)
