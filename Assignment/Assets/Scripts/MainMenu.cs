@@ -13,6 +13,10 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void playSound() {
+        sound.Play();
+    }
+
     public void QuitGame() {
         sound.Play();
         Application.Quit();
