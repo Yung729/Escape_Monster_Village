@@ -6,6 +6,7 @@ public class BossHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth = 0;
+    public int armor = 0;
     public Animator anim;
 
     public HealthBar healthBar;
@@ -27,6 +28,7 @@ public class BossHealth : MonoBehaviour
 
     public void Damage(int damage)
     {
+        damage -= armor;
         if (currentHealth <= 0)
         {
             currentHealth = 0;
