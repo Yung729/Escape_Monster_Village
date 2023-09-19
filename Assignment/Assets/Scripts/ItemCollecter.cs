@@ -9,13 +9,15 @@ public class ItemCollecter : MonoBehaviour
     public AtackArea damage;
 
     [SerializeField] private AudioSource healthSound;
+    [SerializeField] private AudioSource damageSound;
+    [SerializeField] private AudioSource speedSound;
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.gameObject.CompareTag("Potions"))
         {
             Destroy(collision.gameObject);
-            player.addHealth(20);
+            player.addHealth(30);
             healthSound.Play();
             
         }
@@ -23,14 +25,15 @@ public class ItemCollecter : MonoBehaviour
         if (collision.gameObject.CompareTag("Potions1"))
         {
             Destroy(collision.gameObject);
-            damage.increaseDamage(1);
+            damage.increaseDamage(2);
+            damageSound.Play();
         }
 
         if (collision.gameObject.CompareTag("Potions2"))
         {
             Destroy(collision.gameObject);
-            control.increaseSpeed(1.0F);
-
+            control.increaseSpeed(2.0F);
+            speedSound.Play();
         }
 
     }
