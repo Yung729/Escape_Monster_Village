@@ -24,7 +24,7 @@ public class BossShooting : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if (distance < 10)
+        if (distance < 30)
         {
             timer += Time.deltaTime;
             if (timer > 3)
