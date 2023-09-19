@@ -25,12 +25,12 @@ public class BossShooting : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.transform.position);
         Debug.Log(distance);
 
-        if (distance < 10)
+        if (distance < 15)
         {
             timer += Time.deltaTime;
-            if (timer > 6)
+            if (timer > 5)
             {
-                anim.SetTrigger("Lazer");
+                anim.SetTrigger("BossLazer");
                 timer = 0;
                 shoot();
 
