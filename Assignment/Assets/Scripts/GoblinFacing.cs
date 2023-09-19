@@ -10,8 +10,10 @@ public class GoblinFacing : MonoBehaviour
     private Transform playerTransform;
     private bool facingRight = true;
 
+    public Transform player;
+    public Rigidbody2D rb;
     private GameObject GoblinHitBox = default;
-    private Animator anim;
+    public Animator anim;
 
     public void Start()
     {
@@ -28,13 +30,18 @@ public class GoblinFacing : MonoBehaviour
 
             if (distance < radius)
             {
-                transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, speed * Time.deltaTime);
+                Vector2 target = new Vector2(player.position.x, rb.position.y);
+                transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+                anim.SetBool("isRunning", true);
                 if ((playerTransform.position.x < transform.position.x && facingRight) ||
                     (playerTransform.position.x > transform.position.x && !facingRight))
                 {
                     FlipDirection();
                 }
+
             }
+            else
+                anim.SetBool("isRunning", false);
         }
     }
 
@@ -54,4 +61,6 @@ public class GoblinFacing : MonoBehaviour
         transform.localScale = scale;
         GoblinHitBox.transform.localScale = scale1;
     }
+
+
 }
