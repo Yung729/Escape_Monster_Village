@@ -30,11 +30,13 @@ public class EnemyShooting : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > 2)
             {
-                anim.SetTrigger("Attack");
+                anim.SetBool("Attack", true);
                 timer = 0;
                 shoot();
 
             }
+            else
+            anim.SetBool("Attack", false);
         }
 
     }

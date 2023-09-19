@@ -15,9 +15,9 @@ public class EnemyDamage : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        anim.SetBool("Attack", true);
         if (collision.gameObject.tag =="Player")
         {
+            anim.SetBool("Attack", true);
             playerLife.takeDamage(damage);
             
         }
