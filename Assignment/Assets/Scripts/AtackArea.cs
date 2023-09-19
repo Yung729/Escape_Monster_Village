@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AtackArea : MonoBehaviour
 {
-    public int damage = 3;
+    [SerializeField] private int damage = 3;
 
     private void OnTriggerEnter2D(Collider2D collider) {
         if (collider.GetComponent<Health>() != null)
@@ -21,8 +21,9 @@ public class AtackArea : MonoBehaviour
 
     }
 
-    public void increaseDamage(int input)
-    {
+    public void increaseDamage(int input) {
         damage += input;
+        
     }
+
 }
