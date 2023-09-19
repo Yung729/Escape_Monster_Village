@@ -37,6 +37,7 @@ public class BossLazerShootingScript : MonoBehaviour
 
         }
 
-
+        if (other.gameObject.CompareTag("Ground"))
+            Destroy(gameObject);
     }
 }
