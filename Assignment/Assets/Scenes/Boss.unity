@@ -942,7 +942,7 @@ MonoBehaviour:
   currentHealth: 100
   damageSound: {fileID: 174234074}
   deathSound: {fileID: 174234073}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1449010508}
 --- !u!95 &174234080
 Animator:
   serializedVersion: 5
