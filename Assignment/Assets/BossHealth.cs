@@ -8,10 +8,13 @@ public class BossHealth : MonoBehaviour
     public int currentHealth = 0;
     public Animator anim;
 
+    public HealthBar healthBar;
+
     // Start is called before the first frame update
     private void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
 
@@ -40,5 +43,6 @@ public class BossHealth : MonoBehaviour
             }
 
         }
+        healthBar.SetHealth(currentHealth);
     }
 }
