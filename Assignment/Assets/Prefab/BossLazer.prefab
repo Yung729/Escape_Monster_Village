@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1346442950746064435}
   - component: {fileID: 6705745302405669442}
   - component: {fileID: 2640661337130163938}
-  - component: {fileID: 4221231507430756651}
+  - component: {fileID: 2760849950202279557}
   m_Layer: 0
   m_Name: BossLazer
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7728849019519253052
 SpriteRenderer:
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 511708205, guid: 81e2bd88861319245b838ffeffb3254a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -181,7 +181,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &4221231507430756651
+--- !u!114 &2760849950202279557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3932481183220380034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ab6fc352f480e44686647bb5db15440, type: 3}
+  m_Script: {fileID: 11500000, guid: dc0a36b999dca964c9f750930b483944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5

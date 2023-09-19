@@ -25,7 +25,7 @@ public class BossShooting : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.transform.position);
         Debug.Log(distance);
 
-        if (distance < 15)
+        if (distance < 10)
         {
             timer += Time.deltaTime;
             if (timer > 5)
