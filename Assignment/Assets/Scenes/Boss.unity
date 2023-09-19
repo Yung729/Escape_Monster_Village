@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 547193013}
   - component: {fileID: 547193014}
   - component: {fileID: 547193015}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9412,8 +9412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0d9b86d6362d9408671208c847101c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  playerLife: {fileID: 0}
+  damage: 2
+  playerLife: {fileID: 19193952}
 --- !u!1 &1056609070
 GameObject:
   m_ObjectHideFlags: 0
@@ -11387,8 +11387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0d9b86d6362d9408671208c847101c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  playerLife: {fileID: 0}
+  damage: 2
+  playerLife: {fileID: 19193952}
 --- !u!1 &2025659443
 GameObject:
   m_ObjectHideFlags: 0
