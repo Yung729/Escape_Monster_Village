@@ -30,7 +30,7 @@ public class BossShooting : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > 5)
             {
-                anim.SetTrigger("BossLazer");
+                anim.SetTrigger("Lazer");
                 timer = 0;
                 shoot();
 
