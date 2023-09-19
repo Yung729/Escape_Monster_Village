@@ -90,8 +90,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.S))
         {
             anim.SetTrigger("Reload");
-            coll.offset = new Vector2(0.007280096F, -0.01875249F);
-            coll.size = new Vector2(0.3447157F, 1.227855F);
+            coll.offset = new Vector2(-0.02005681F, -0.01875266F);
+            coll.size = new Vector2(0.7152854F, 1.306365F);
         }
 
         UpdateAnimationUpdate();
