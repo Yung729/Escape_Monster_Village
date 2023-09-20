@@ -17,7 +17,6 @@ public class EnemyDamage : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag =="Player")
         {
-            anim.SetBool("isRunning", false);       //if monster collide with player, stop running
             anim.SetBool("Attack", true);
             playerLife.takeDamage(damage);
             

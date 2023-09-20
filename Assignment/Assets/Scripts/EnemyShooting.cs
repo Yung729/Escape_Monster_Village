@@ -33,12 +33,18 @@ public class EnemyShooting : MonoBehaviour
                 anim.SetBool("Attack", true);
                 timer = 0;
                 shoot();
-
+                StartCoroutine(Reload());
             }
-            else
-            anim.SetBool("Attack", false);
+            
+            
         }
 
+    }
+
+    private IEnumerator Reload()
+    {
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("Attack", false);
     }
 
     void shoot()

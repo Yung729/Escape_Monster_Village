@@ -7,7 +7,7 @@ public class MonsterPatrol : MonoBehaviour
     public Transform[] patrolPoints;
     public float moveSpeed;
     public int patrolDestination;
-
+    public Animator anim;
     void Start()
     {
 
@@ -22,6 +22,7 @@ public class MonsterPatrol : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
             if (Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
             {
+                anim.SetBool("isRunning", true);
                 transform.localScale = new Vector3(1, 1, 1);
                 patrolDestination = 1;
             }
@@ -29,6 +30,7 @@ public class MonsterPatrol : MonoBehaviour
 
         if (patrolDestination == 1)
         {
+            anim.SetBool("isRunning", true);
             transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
             if (Vector2.Distance(transform.position, patrolPoints[1].position) < .2f)
             {
