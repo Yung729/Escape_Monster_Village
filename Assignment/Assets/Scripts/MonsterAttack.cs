@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDamage : MonoBehaviour
+public class MonsterAttack : MonoBehaviour
 {
-    public int damage;
-    public PlayerLife playerLife;
     private Animator anim;
     // Start is called before the first frame update
 
@@ -18,8 +16,6 @@ public class EnemyDamage : MonoBehaviour
         if (collision.gameObject.tag =="Player")
         {
             anim.SetBool("Attack", true);
-            playerLife.takeDamage(damage);
-            
         }
     }
 
