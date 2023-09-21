@@ -29,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioSource sttackSound;
     [SerializeField] private AudioSource jumpSound;
 
+    //knockback
+    public float KBForce;
+    public float KBCounter;
+    public float KBTotalTime;
+
+    public bool KnockFromRight;
 
     private void Start()
     {
@@ -96,9 +102,27 @@ public class PlayerMovement : MonoBehaviour
 
         UpdateAnimationUpdate();
 
+        //knockback
+        if (KBCounter <= 0)
+        {
+            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        }
+        else
+        {
+            if (KnockFromRight == true)
+            {
+                rb.velocity = new Vector2(-KBForce, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(KBForce, 0);
+            }
 
+            KBCounter -= Time.deltaTime;
+        }
     }
-
+        
+    
     void OnCollisionEnter2D(Collision2D other) // added
     {
         if (other.gameObject.CompareTag("Ground"))
