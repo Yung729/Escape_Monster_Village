@@ -25167,6 +25167,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 99976348}
     m_Modifications:
+    - target: {fileID: 1608989441225479119, guid: b3441fc4782a65d4c8bcf335aa814178, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608989441225479119, guid: b3441fc4782a65d4c8bcf335aa814178, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1469928041
+      objectReference: {fileID: 0}
     - target: {fileID: 4546820122487771540, guid: b3441fc4782a65d4c8bcf335aa814178, type: 3}
       propertyPath: m_Name
       value: Saw
