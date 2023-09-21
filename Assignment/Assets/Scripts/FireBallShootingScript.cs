@@ -32,14 +32,12 @@ public class FireBallShootingScript : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             Destroy(gameObject);
-
         }
 
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PlayerLife>().takeDamage(20);
             Destroy(gameObject);
-
         }
 
     }

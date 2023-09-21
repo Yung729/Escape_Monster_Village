@@ -32,7 +32,7 @@ public class EnemyShooting : MonoBehaviour
             {
                 anim.SetBool("Attack", true);
                 timer = 0;
-                shoot();
+                //shoot();
                 StartCoroutine(Reload());
             }
             
@@ -44,11 +44,9 @@ public class EnemyShooting : MonoBehaviour
     private IEnumerator Reload()
     {
         yield return new WaitForSeconds(1f);
+        Instantiate(bullet, bulletPos.position, Quaternion.identity);
         anim.SetBool("Attack", false);
     }
 
-    void shoot()
-    {
-        Instantiate(bullet, bulletPos.position, Quaternion.identity);
-    }
+    
 }
