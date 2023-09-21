@@ -822,6 +822,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 125310692}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &125310700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3273,6 +3276,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 440856149}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &440856147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4352,6 +4358,9 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 0
   anim: {fileID: 1961775459}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &783444288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4530,6 +4539,9 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 0
   anim: {fileID: 425175863}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &816533389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5912,6 +5924,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   anim: {fileID: 1146013484}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &1146013492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6278,6 +6293,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 1186399549}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &1186399547
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7840,6 +7858,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 1414600540}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1414600538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9505,6 +9526,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 1673236785}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &1673236783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9980,6 +10004,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   anim: {fileID: 1755896411}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &1755896408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10447,6 +10474,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   anim: {fileID: 332343212}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1810743973
 GameObject:
   m_ObjectHideFlags: 0
@@ -11876,7 +11906,7 @@ GameObject:
   - component: {fileID: 1930892531}
   - component: {fileID: 1930892530}
   - component: {fileID: 1930892532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lava_0 (6)
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -26925,9 +26955,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 223125637446508582, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 586701439852794757, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 586701439852794757, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586701439852794757, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186724760131753543, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199381090419776298, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6663146333790320795, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
       propertyPath: waypoints.Array.size
