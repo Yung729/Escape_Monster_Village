@@ -738,7 +738,7 @@ Rigidbody2D:
   m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -749,7 +749,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!61 &125310696
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -822,6 +822,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 125310692}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &125310700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2131,7 +2134,7 @@ MonoBehaviour:
   jumpForce: 12
   sttackSound: {fileID: 349008610}
   jumpSound: {fileID: 349008609}
-  KBForce: 6
+  KBForce: 4
   KBCounter: 0
   KBTotalTime: 0.4
   KnockFromRight: 0
@@ -2267,7 +2270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349008600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 71, y: 5, z: 0}
+  m_LocalPosition: {x: 71.56, y: 5.65, z: 0}
   m_LocalScale: {x: 1.343615, y: 1.2475923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2309,7 +2312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: 1000
   damageSound: {fileID: 349008612}
   deathSound: {fileID: 349008613}
   healthBar: {fileID: 252734651}
@@ -3273,6 +3276,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 440856149}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &440856147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3330,7 +3336,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -3344,7 +3350,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!95 &440856149
 Animator:
   serializedVersion: 5
@@ -4352,6 +4358,9 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 0
   anim: {fileID: 1961775459}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &783444288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4530,6 +4539,9 @@ MonoBehaviour:
   maxHealth: 15
   currentHealth: 0
   anim: {fileID: 425175863}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &816533389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5916,6 +5928,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   anim: {fileID: 1146013484}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &1146013492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6282,6 +6297,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 1186399549}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &1186399547
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6339,10 +6357,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -6353,7 +6371,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!95 &1186399549
 Animator:
   serializedVersion: 5
@@ -7844,6 +7862,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 1414600540}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1414600538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7901,7 +7922,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -7915,7 +7936,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!95 &1414600540
 Animator:
   serializedVersion: 5
@@ -8322,6 +8343,71 @@ Transform:
   m_Father: {fileID: 1123429729}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1467825913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611314361681740327, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372663416578327019, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_Name
+      value: Chest (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868371590955379496, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: time
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
 --- !u!1 &1486579321
 GameObject:
   m_ObjectHideFlags: 0
@@ -9444,6 +9530,9 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 0
   anim: {fileID: 1673236785}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &1673236783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9501,10 +9590,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9515,7 +9604,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!95 &1673236785
 Animator:
   serializedVersion: 5
@@ -9919,6 +10008,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   anim: {fileID: 1755896411}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &1755896408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10386,6 +10478,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   anim: {fileID: 332343212}
+  lavaGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1810743973
 GameObject:
   m_ObjectHideFlags: 0
@@ -11815,7 +11910,7 @@ GameObject:
   - component: {fileID: 1930892531}
   - component: {fileID: 1930892530}
   - component: {fileID: 1930892532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lava_0 (6)
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -26864,9 +26959,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 223125637446508582, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 586701439852794757, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 586701439852794757, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586701439852794757, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186724760131753543, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199381090419776298, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6663146333790320795, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
       propertyPath: waypoints.Array.size
