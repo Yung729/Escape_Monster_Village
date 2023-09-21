@@ -20,6 +20,7 @@ public class BossDamage : MonoBehaviour
         
         if (collision.gameObject.tag == "Player")
         {
+            attackSound.Play();
             playerLife.takeDamage(damage);
         }
     }

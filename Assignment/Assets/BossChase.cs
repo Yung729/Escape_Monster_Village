@@ -39,23 +39,28 @@ public class BossChase : MonoBehaviour
         }
     }
 
+
+
     private void FlipBossDirection()
     {
         facingRight = !facingRight; // Toggle the facing direction
 
-        // Get the current local scale
+        // Get the current local scale of the boss
         Vector3 scale = transform.localScale;
-        Vector3 scale1 = hitBox.transform.localScale;
-        Vector3 scale2 = hitBox1.transform.localScale;
 
-        // Flip the X-axis of the local scale
+        // Flip the X-axis of the local scale to change the boss's direction
         scale.x *= -1;
-        scale1.x *= -1;
-        scale2.x *= -1;
 
         // Apply the new local scale to flip the boss
         transform.localScale = scale;
-        hitBox.transform.localScale = scale1;
-        hitBox1.transform.localScale = scale2;
+
+        // Flip the X-axis of the hitBox and hitBox1 local scales as well
+        Vector3 hitBoxScale = hitBox.transform.localScale;
+        hitBoxScale.x = -1;
+        hitBox.transform.localScale = hitBoxScale;
+
+        Vector3 hitBox1Scale = hitBox1.transform.localScale;
+        hitBox1Scale.x = -1;
+        hitBox1.transform.localScale = hitBox1Scale;
     }
 }
