@@ -29,6 +29,7 @@ public class BossHealth : MonoBehaviour
     public void Damage(int damage)
     {
         damage -= armor;
+        StartCoroutine(VisualIndicator(Color.red));
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -46,5 +47,12 @@ public class BossHealth : MonoBehaviour
 
         }
         healthBar.SetHealth(currentHealth);
+    }
+
+    private IEnumerator VisualIndicator(Color color)
+    {
+        GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
