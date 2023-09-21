@@ -4986,6 +4986,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5373330553216305744, guid: 16a652d6d18817e4e8c0a8a7fd59d143, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5373330553216305745, guid: 16a652d6d18817e4e8c0a8a7fd59d143, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -6247,7 +6251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  radius: 15
+  radius: 8
   player: {fileID: 349008605}
   rb: {fileID: 1186399548}
   anim: {fileID: 1186399549}
