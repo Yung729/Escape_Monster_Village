@@ -354,7 +354,7 @@ MonoBehaviour:
   anim: {fileID: 53496256}
   lavaGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!61 &53496254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3447,7 +3447,7 @@ MonoBehaviour:
   anim: {fileID: 440856149}
   lavaGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!61 &440856147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26931,6 +26931,10 @@ PrefabInstance:
     - target: {fileID: 586701439852794757, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2352860152765667334, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.37
       objectReference: {fileID: 0}
     - target: {fileID: 4186724760131753543, guid: 27a9dc538e315304dbe7a66d74519c45, type: 3}
       propertyPath: m_Layer

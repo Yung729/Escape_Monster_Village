@@ -25,13 +25,17 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void Die() {
+        Destroy(gameObject);
+    }
+
     public void Damage(int damage)
     {
 
         if (currentHealth <= 0)
         {
+            anim.SetTrigger("Die");
             currentHealth = 0;
-            Destroy(gameObject);
         }
         else
         {
@@ -39,7 +43,7 @@ public class Health : MonoBehaviour
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
-                Destroy(gameObject);
+                anim.SetTrigger("Die"); 
                 currentHealth = 0;
             }
 

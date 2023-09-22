@@ -25,5 +25,10 @@ public class MonsterAttack : MonoBehaviour
         
     }
 
+    public void DiePatrol() {
+        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
+    }
+
 
 }
