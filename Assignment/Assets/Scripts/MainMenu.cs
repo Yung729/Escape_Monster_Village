@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private AudioSource sound;
 
     public void PlayGame() {
-        sound.Play();
         SceneManager.LoadScene(1);
 
     }
@@ -18,7 +17,6 @@ public class MainMenu : MonoBehaviour
     }
 
     public void QuitGame() {
-        sound.Play();
         Application.Quit();
     }
 }
