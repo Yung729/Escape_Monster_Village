@@ -10,6 +10,14 @@ public class BossHealth : MonoBehaviour
     public Animator anim;
 
     public HealthBar healthBar;
+    public GameObject panel;
+
+
+    public FadeAnim fade;
+
+    
+    // Update is called once per frame
+    
 
     // Start is called before the first frame update
     private void Start()
@@ -18,6 +26,9 @@ public class BossHealth : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
+    
+          
+
 
     public void Die()
     {
@@ -25,23 +36,31 @@ public class BossHealth : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void showUI()
+    {
+        panel.SetActive(true);
+        fade.setStatus(true);
+
+    }
 
     public void Damage(int damage)
     {
         damage -= armor;
         StartCoroutine(VisualIndicator(Color.red));
+
         if (currentHealth <= 0)
         {
             currentHealth = 0;
             anim.SetTrigger("Death");
-            
         }
         else
         {
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
+                anim.SetTrigger("Death");
                 Destroy(gameObject);
+                showUI();
                 currentHealth = 0;
             }
 
