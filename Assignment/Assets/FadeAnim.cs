@@ -5,7 +5,7 @@ using UnityEngine;
 public class FadeAnim : MonoBehaviour
 {
     [SerializeField] private CanvasGroup ui;
-
+    [SerializeField] private AudioSource victorySound;
     public bool fadeIn = false;
 
     public void showUI()
@@ -19,6 +19,7 @@ public class FadeAnim : MonoBehaviour
     {
         if (fadeIn)
         {
+            victorySound.Play();
             if (ui.alpha < 1)
             {
                 ui.alpha += Time.deltaTime;

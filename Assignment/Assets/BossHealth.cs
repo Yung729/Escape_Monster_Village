@@ -11,13 +11,14 @@ public class BossHealth : MonoBehaviour
 
     public HealthBar healthBar;
     public GameObject panel;
+    public GameObject bGMusic;
 
 
     public FadeAnim fade;
+    
 
-    
     // Update is called once per frame
-    
+
 
     // Start is called before the first frame update
     private void Start()
@@ -25,10 +26,6 @@ public class BossHealth : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
-
-    
-          
-
 
     public void Die()
     {
@@ -40,7 +37,8 @@ public class BossHealth : MonoBehaviour
     {
         panel.SetActive(true);
         fade.setStatus(true);
-
+        bGMusic.SetActive(false);
+        
     }
 
     public void Damage(int damage)
