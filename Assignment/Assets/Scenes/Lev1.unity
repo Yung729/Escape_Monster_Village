@@ -2399,7 +2399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 1000
+  currentHealth: 100
   damageSound: {fileID: 349008612}
   deathSound: {fileID: 349008613}
   healthBar: {fileID: 252734651}
