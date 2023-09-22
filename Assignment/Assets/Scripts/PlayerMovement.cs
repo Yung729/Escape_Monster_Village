@@ -89,8 +89,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             anim.SetTrigger("Crouch");
-            coll.offset = new Vector2(0.03795502F, -0.1938401F);
-            coll.size = new Vector2(0.634712F, 0.9188361F);
+            coll.offset = new Vector2(0.03795502F, -0.20655F);
+            coll.size = new Vector2(0.634712F, 0.8703631F);
         }
 
         if (Input.GetKeyUp(KeyCode.S))
