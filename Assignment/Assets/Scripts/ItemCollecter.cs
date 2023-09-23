@@ -16,6 +16,7 @@ public class ItemCollecter : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Potions"))
         {
+            StartCoroutine(VisualIndicator(Color.green));
             Destroy(collision.gameObject);
             player.addHealth(30);
             healthSound.Play();
@@ -24,6 +25,7 @@ public class ItemCollecter : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Potions1"))
         {
+            StartCoroutine(VisualIndicator(Color.red));
             Destroy(collision.gameObject);
             damage.increaseDamage(2);
             damageSound.Play();
@@ -31,11 +33,19 @@ public class ItemCollecter : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Potions2"))
         {
+            StartCoroutine(VisualIndicator(Color.blue));
             Destroy(collision.gameObject);
             control.increaseSpeed(2.0F);
             speedSound.Play();
         }
 
+    }
+
+    private IEnumerator VisualIndicator(Color color)
+    {
+        GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 
 }

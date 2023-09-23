@@ -170,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void increaseSpeed(float speed) {
-        StartCoroutine(VisualIndicator(Color.blue));
+        
         moveSpeed += speed;
         StartCoroutine(playerIncreaseSpeedTimer(2,speed));
     }
@@ -187,12 +187,7 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed -= input;
     }
 
-    private IEnumerator VisualIndicator(Color color)
-    {
-        GetComponent<SpriteRenderer>().color = color;
-        yield return new WaitForSeconds(0.15f);
-        GetComponent<SpriteRenderer>().color = Color.white;
-    }
+    
 
 
     private void Attack() {

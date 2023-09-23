@@ -76,17 +76,13 @@ public class PlayerLife : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    private IEnumerator VisualIndicator(Color color) {
-        GetComponent<SpriteRenderer>().color = color;
-        yield return new WaitForSeconds(0.15f);
-        GetComponent<SpriteRenderer>().color = Color.white;
-    }
+
 
     public void addHealth(int health)
     {
         int healthCheck = currentHealth;
         healthCheck += health;
-        StartCoroutine(VisualIndicator(Color.green));
+        
         if (healthCheck >= 100)
         {
             currentHealth = 100;
