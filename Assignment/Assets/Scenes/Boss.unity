@@ -2102,7 +2102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  radius: 50
+  radius: 100
 --- !u!114 &547193014
 MonoBehaviour:
   m_ObjectHideFlags: 0
