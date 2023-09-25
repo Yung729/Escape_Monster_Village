@@ -4,48 +4,42 @@ using UnityEngine;
 
 public class BossMode : StateMachineBehaviour
 {
-    private int rand;
+    private List<string> triggerNames = new List<string> { "Idle", "Melee", "Attack", "Laser", "Defend", "Defend2" };
+    private string lastTrigger = "";
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        rand = Random.Range(0, 6);
+        // Remove the last used trigger from the list
+        if (!string.IsNullOrEmpty(lastTrigger))
+        {
+            triggerNames.Remove(lastTrigger);
+        }
 
-        if (rand == 0)
+        // If all triggers have been used, reset the list
+        if (triggerNames.Count == 0)
         {
-            animator.SetTrigger("Idle");
+            triggerNames = new List<string> { "Idle", "Melee", "Attack", "Laser", "Defend", "Defend2" };
         }
-        else if (rand == 1)
-        {
-            animator.SetTrigger("Melee");
-        }
-        else if (rand == 2)
-        {
-            animator.SetTrigger("Attack");
-        }
-        else if (rand == 3)
-        {
-            animator.SetTrigger("Laser");
-        }
-        else if (rand == 4)
-        {
-            animator.SetTrigger("Defend");
-        }
-        else if (rand == 5)
-        {
-            animator.SetTrigger("Defend2");
-        }
+
+        // Randomly select a trigger from the remaining list
+        int rand = Random.Range(0, triggerNames.Count);
+        string selectedTrigger = triggerNames[rand];
+
+        // Set the selected trigger and store it as the last used trigger
+        animator.SetTrigger(selectedTrigger);
+        lastTrigger = selectedTrigger;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
-    }
 
+    }
 }
