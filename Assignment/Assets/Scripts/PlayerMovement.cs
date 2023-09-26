@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
 
+        anim.SetBool("Reload", false);
         if (Input.GetButtonDown("Jump") && IsGrounded() && !isJumping && !doubleJump) //is jumping added
         {
             jumpSound.Play();
@@ -91,11 +92,9 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("Crouch");
             coll.offset = new Vector2(0.03795502F, -0.20655F);
             coll.size = new Vector2(0.634712F, 0.8703631F);
-        }
-
-        if (Input.GetKeyUp(KeyCode.S) )
+        }else if (Input.GetKeyUp(KeyCode.S) )
         {
-            anim.SetTrigger("Reload");
+            anim.SetBool("Reload",true);
             coll.offset = new Vector2(-0.02005681F, -0.01875266F);
             coll.size = new Vector2(0.7152854F, 1.306365F);
         }
