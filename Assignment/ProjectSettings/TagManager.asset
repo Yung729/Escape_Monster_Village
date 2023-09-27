@@ -10,6 +10,7 @@ TagManager:
   - Monster
   - Potions1
   - Potions2
+  - Key
   layers:
   - Default
   - TransparentFX

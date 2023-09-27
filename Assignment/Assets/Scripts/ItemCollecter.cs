@@ -8,6 +8,8 @@ public class ItemCollecter : MonoBehaviour
     public PlayerMovement control;
     public AtackArea damage;
 
+    public static int key = 0;
+
     [SerializeField] private AudioSource healthSound;
     [SerializeField] private AudioSource damageSound;
     [SerializeField] private AudioSource speedSound;
@@ -44,6 +46,13 @@ public class ItemCollecter : MonoBehaviour
             speedSound.Play();
         }
 
+        if (collision.gameObject.CompareTag("Key"))
+        {
+            
+            Destroy(collision.gameObject);
+            key = 1;
+        }
+
     }
 
     private IEnumerator VisualIndicator(Color color)
@@ -59,6 +68,10 @@ public class ItemCollecter : MonoBehaviour
         buff1.SetActive(true);
         yield return new WaitForSeconds(1f);
         buff1.SetActive(false);
+    }
+
+    public static int getKey() {
+        return key;
     }
 
 }
