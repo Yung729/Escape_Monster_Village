@@ -11,6 +11,8 @@ public class EnemyShooting : MonoBehaviour
     private Animator anim;
     private float timer;
     private GameObject player;
+    [SerializeField] private AudioSource attackSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,7 @@ public class EnemyShooting : MonoBehaviour
     private IEnumerator Reload()
     {
         yield return new WaitForSeconds(0.7f);
+        attackSound.Play();
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
         anim.SetBool("Attack", false);
     }

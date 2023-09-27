@@ -25,8 +25,5 @@ public class BossDamage : MonoBehaviour
         }
     }
 
-    public void startSound() {
-        attackSound.Play();
-    }
 
 }

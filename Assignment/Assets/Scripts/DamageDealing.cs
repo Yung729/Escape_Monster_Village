@@ -7,6 +7,7 @@ public class DamageDealing : MonoBehaviour
     public int damage;
     public PlayerLife playerLife;
     public PlayerMovement playerMovement;
+    [SerializeField] private AudioSource attackSound;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class DamageDealing : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            attackSound.Play();
             playerMovement.KBCounter = playerMovement.KBTotalTime;
          
             if(collision.transform.position.x <= transform.position.x)

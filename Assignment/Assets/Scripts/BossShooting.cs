@@ -11,6 +11,7 @@ public class BossShooting : MonoBehaviour
     private Animator anim;
     private float timer;
     private GameObject player;
+    [SerializeField] private AudioSource attackSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +25,10 @@ public class BossShooting : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if (distance < 30)
+        if (distance < 50)
         {
             timer += Time.deltaTime;
-            if (timer > 3)
+            if (timer > 2)
             {
                 
                 timer = 0;
@@ -40,6 +41,7 @@ public class BossShooting : MonoBehaviour
 
     void shoot()
     {
+        attackSound.Play();
         Instantiate(lazer, lazerPos.position, Quaternion.identity);
     }
 }
