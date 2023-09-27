@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Parallax : MonoBehaviour
+public class parallex : MonoBehaviour
 {
-    public Transform camTransform;
+    public GameObject cam;
     public float parallaxEffect;
+
     private float length, startpos;
 
     // Start is called before the first frame update
@@ -18,16 +19,22 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = (camTransform.position.x - startpos) * (1 - parallaxEffect);
+        float temp = cam.transform.position.x * (1 - parallaxEffect);
+        float distance = (cam.transform.position.x * parallaxEffect);
+
+
         transform.position = new Vector2(startpos + distance, transform.position.y);
 
-        if (distance > length)
+
+        if (temp > startpos + length)
         {
             startpos += length;
         }
-        else if (distance < -length)
+        else if (temp < startpos - length)
         {
             startpos -= length;
         }
     }
+    
+
 }
