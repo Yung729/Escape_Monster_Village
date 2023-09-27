@@ -14,15 +14,13 @@ public class MonsterAttack : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag =="Player")
         {
-            
             anim.SetBool("Attack", true);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        anim.SetBool("Attack", false);
-        
+        anim.SetBool("Attack", false); 
     }
 
     public void DiePatrol() {
