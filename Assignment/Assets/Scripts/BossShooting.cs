@@ -44,4 +44,6 @@ public class BossShooting : MonoBehaviour
         attackSound.Play();
         Instantiate(lazer, lazerPos.position, Quaternion.identity);
     }
+
+
 }
