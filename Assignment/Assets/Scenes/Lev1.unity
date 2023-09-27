@@ -1708,6 +1708,18 @@ PrefabInstance:
       propertyPath: healthPotion
       value: 
       objectReference: {fileID: 2884668137417629070, guid: cfe3d7f790928514087b2e8e5aede0e3, type: 3}
+    - target: {fileID: 8508100356274162715, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_Color.b
+      value: 0.62418646
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508100356274162715, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_Color.g
+      value: 0.61772877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508100356274162715, guid: f5a0a765051e79641ba186f0e4513182, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6792453
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
