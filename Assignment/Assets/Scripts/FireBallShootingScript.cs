@@ -7,6 +7,7 @@ public class FireBallShootingScript : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
 
+    private Animator anim;
     public float force;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class FireBallShootingScript : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
@@ -36,6 +37,7 @@ public class FireBallShootingScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
+            anim.SetBool("Explode", true);
             other.gameObject.GetComponent<PlayerLife>().takeDamage(20);
             Destroy(gameObject);
         }
