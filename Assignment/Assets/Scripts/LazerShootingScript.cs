@@ -46,6 +46,9 @@ public class LazerShootingScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Ground"))
             Destroy(gameObject);
+            lastPos = gameObject.transform;
+            instantiatedPrefab = Instantiate(prefab, lastPos.position, Quaternion.identity);
+            Destroy(instantiatedPrefab, 0.5f); // Destroy the instantiated object after waiting
 
     }
 
