@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d26bc5503c4c54f9ba482b22f1f065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lazer: {fileID: 3932481183220380034, guid: 6e4e62fad9812af4296cd4437952ccda, type: 3}
+  lazer: {fileID: 0}
   lazerPos: {fileID: 665726668}
   attackSound: {fileID: 547193016}
 --- !u!82 &547193016
