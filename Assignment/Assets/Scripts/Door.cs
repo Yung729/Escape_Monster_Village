@@ -38,7 +38,7 @@ public class Door : MonoBehaviour
             }
             else
             {
-                message.SetActive(true);
+                StartCoroutine(messagePrompt());
             }
             
         }
@@ -63,5 +63,12 @@ public class Door : MonoBehaviour
             isDoor = false;
             key.SetActive(false);
         }
+    }
+
+    private IEnumerator messagePrompt()
+    {
+        message.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        message.SetActive(false);
     }
 }
