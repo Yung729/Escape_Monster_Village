@@ -7,6 +7,7 @@ public class LazerShootingScript : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public GameObject prefab;
+    private GameObject instantiatedPrefab;
     private Transform lastPos;
     public float force;
     // Start is called before the first frame update
@@ -35,10 +36,11 @@ public class LazerShootingScript : MonoBehaviour
         {
             
             other.gameObject.GetComponent<PlayerLife>().takeDamage(10);
-            lastPos = gameObject.transform;
             Destroy(gameObject);
-            StartCoroutine(Explode());
-
+            lastPos = gameObject.transform;
+            instantiatedPrefab = Instantiate(prefab, lastPos.position, Quaternion.identity);
+            Destroy(instantiatedPrefab,0.5f); // Destroy the instantiated object after waiting
+            
         }
 
 
@@ -47,10 +49,4 @@ public class LazerShootingScript : MonoBehaviour
 
     }
 
-    private IEnumerator Explode()
-    {
-        GameObject instantiatedPrefab = Instantiate(prefab, lastPos.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.5f);
-        Destroy(instantiatedPrefab); // Destroy the instantiated object, not the prefab
-    }
 }

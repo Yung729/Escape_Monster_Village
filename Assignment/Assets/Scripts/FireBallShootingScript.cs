@@ -9,6 +9,11 @@ public class FireBallShootingScript : MonoBehaviour
 
     private Animator anim;
     public float force;
+
+    public GameObject prefab;
+    private GameObject instantiatedPrefab;
+    private Transform lastPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +42,11 @@ public class FireBallShootingScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            anim.SetBool("Explode", true);
             other.gameObject.GetComponent<PlayerLife>().takeDamage(20);
             Destroy(gameObject);
+            lastPos = gameObject.transform;
+            instantiatedPrefab = Instantiate(prefab, lastPos.position, Quaternion.identity);
+            Destroy(instantiatedPrefab, 0.5f); // Destroy the instantiated object after waiting
         }
 
     }

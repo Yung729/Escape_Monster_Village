@@ -172,3 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
+  prefab: {fileID: 8339943885275491674, guid: 3d90af30dfa562140a785324bb073efb, type: 3}
