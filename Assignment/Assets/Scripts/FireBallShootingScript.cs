@@ -28,7 +28,7 @@ public class FireBallShootingScript : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {

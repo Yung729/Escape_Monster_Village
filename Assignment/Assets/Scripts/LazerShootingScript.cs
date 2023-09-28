@@ -6,7 +6,8 @@ public class LazerShootingScript : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
-
+    public GameObject prefab;
+    private Transform lastPos;
     public float force;
     // Start is called before the first frame update
     void Start()
@@ -32,8 +33,11 @@ public class LazerShootingScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
+            
             other.gameObject.GetComponent<PlayerLife>().takeDamage(10);
+            lastPos = gameObject.transform;
             Destroy(gameObject);
+            StartCoroutine(Explode());
 
         }
 
@@ -41,5 +45,12 @@ public class LazerShootingScript : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
             Destroy(gameObject);
 
+    }
+
+    private IEnumerator Explode()
+    {
+        GameObject instantiatedPrefab = Instantiate(prefab, lastPos.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(instantiatedPrefab); // Destroy the instantiated object, not the prefab
     }
 }
