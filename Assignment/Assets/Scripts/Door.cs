@@ -35,6 +35,7 @@ public class Door : MonoBehaviour
             if (ItemCollecter.getKey() == 1)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                ItemCollecter.setKey(0);
             }
             else
             {
@@ -70,5 +71,6 @@ public class Door : MonoBehaviour
         message.SetActive(true);
         yield return new WaitForSeconds(1f);
         message.SetActive(false);
+
     }
 }

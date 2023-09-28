@@ -13,6 +13,7 @@ public class ItemCollecter : MonoBehaviour
     [SerializeField] private AudioSource healthSound;
     [SerializeField] private AudioSource damageSound;
     [SerializeField] private AudioSource speedSound;
+    [SerializeField] private AudioSource keySound;
 
     private GameObject buff1 = default;
 
@@ -48,7 +49,7 @@ public class ItemCollecter : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Key"))
         {
-            
+            keySound.Play();
             Destroy(collision.gameObject);
             key = 1;
         }
@@ -72,6 +73,11 @@ public class ItemCollecter : MonoBehaviour
 
     public static int getKey() {
         return key;
+    }
+
+    public static void setKey(int value)
+    {
+        key = value;
     }
 
 }
